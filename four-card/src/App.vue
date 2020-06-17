@@ -1,18 +1,44 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Card
+    :card-data="cardData[0]"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Card from './components/Card.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Card
+  },
+  data: () => ({
+    cardData: [
+      {
+        head: 'Team Builder',
+        text: 'Lorem ipsum',
+        cardType: 'red-house'
+      },
+      {
+        head: 'Calculator',
+        text: 'Lorem ipsum',
+        cardType: 'blue-machine'
+      },
+      {
+        head: 'Karma',
+        text: 'Lorem ipsum',
+        cardType: 'yellow-light'
+      },
+      {
+        head: 'Supervisor',
+        text: 'Lorem ipsum',
+        cardType: 'cyan-glass'
+      }
+    ]
+  })
 }
 </script>
 
